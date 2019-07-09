@@ -1,5 +1,5 @@
-name: TextCNN Train-V2 Model
-id: 606a9ec8-edb3-4259-81a1-2010a9b0260b
+name: TextCNN Train-V3 Model
+id: 3dae8366-a4e3-452d-ab85-585e0d51af70
 category: Machine Learning\Train
 description: Trains a TextCNN model in a supervised manner
 inputs:
@@ -80,7 +80,7 @@ implementation:
           - pyyaml==5.1.1
           - https://download.pytorch.org/whl/cu100/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
           - https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl
-          - git+https://github.com/Angeliacs/learn-kubeflow.git@chsi/ds_cnn_text_classify#subdirectory=cnn-text-classify
+          - git+https://github.com/Angeliacs/learn-kubeflow.git@chsi/ds_generaricfolder_cnn#subdirectory=cnn-text-classify
     command:
     - python
     - -m

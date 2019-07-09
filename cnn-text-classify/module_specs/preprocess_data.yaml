@@ -1,5 +1,5 @@
-name: TextCNN Word to Id
-id: 89b03051-b9d1-4a79-8c8c-f627290b875a
+name: V2 TextCNN Word to Id
+id: 408ac085-6e61-4d6a-95d3-e02713fd62a3
 category: Machine Learning\Preprocess
 description: Transform Word to Id
 inputs:
@@ -36,7 +36,7 @@ implementation:
           - numpy==1.16.2
           - https://download.pytorch.org/whl/cu100/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
           - https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl
-          - git+https://github.com/Angeliacs/learn-kubeflow.git@chsi/ds_cnn_text_classify#subdirectory=cnn-text-classify
+          - git+https://github.com/Angeliacs/learn-kubeflow.git@chsi/ds_generaricfolder_cnn#subdirectory=cnn-text-classify
     command:
     - python
     - -m
