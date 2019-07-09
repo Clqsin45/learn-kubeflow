@@ -15,13 +15,13 @@ class DataPreprocessor(object):
         self.vocab_path = vocab_path
         self.rule = re.compile(r"[^\u4e00-\u9fa5]")
         self.cut = word_tokenize
-        # with open(self.vocab_path + '/' + 'word2id.pkl', 'rb') as f:
-        #     self.word2id = pickle.load(f)
-        #for test
-        module_path = os.path.dirname(os.path.abspath(__file__))
-        dict_file = os.path.join(module_path, "word2id.pkl")
-        with open(dict_file, 'rb') as f:
+        with open(self.vocab_path + '/' + 'word2id.pkl', 'rb') as f:
             self.word2id = pickle.load(f)
+        #for test
+        # module_path = os.path.dirname(os.path.abspath(__file__))
+        # dict_file = os.path.join(module_path, "word2id.pkl")
+        # with open(dict_file, 'rb') as f:
+        #     self.word2id = pickle.load(f)
 
 
     def process(self, data_frame: pd.DataFrame):
