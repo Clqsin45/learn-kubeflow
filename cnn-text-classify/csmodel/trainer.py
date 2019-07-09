@@ -166,7 +166,7 @@ class Trainer():
         import yaml
 
         file = open(yaml_path, "w")
-        data = {'model_file_path': save_path, 'flavor': {'framework': 'Pytorch'}}
+        data = {'model_file_path': 'model.pkl', 'flavor': {'framework': 'Pytorch'}}
         yaml.dump(data, file)
         file.close()
 
