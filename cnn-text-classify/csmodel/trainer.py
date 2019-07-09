@@ -56,7 +56,8 @@ class Trainer():
 
         with open(os.path.join(self.args.vocab_path, 'data_type.json'), 'w') as f:
             json.dump(dct, f)
-
+        with open(os.path.join(self.args.vocab_path, 'data.folder'), 'w') as f:
+            json.dump(dct, f)
 
         self.train_iter, self.test_iter = load_data(self.args.train_file, self.args.test_file, self.word2id,
                                                     self.label2id, self.args)
