@@ -40,7 +40,7 @@ implementation:
     command:
     - python
     - -m
-    - csmodel.predictor_updated_only_model
+    - csmodel.score
     args:
     - -trained-model
     - inputValue: Trained model
@@ -62,8 +62,8 @@ implementation:
         name: process
         inputs:
         - name: data_frame
-          type: DataFrame #
+          type: DataFrame
         outputs:
         - name: data_frame
-          type: DataFrame #d
+          type: DataFrame
 

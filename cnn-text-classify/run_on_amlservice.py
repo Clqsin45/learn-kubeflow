@@ -7,10 +7,10 @@ from azureml.core.environment import DEFAULT_GPU_IMAGE
 MODULE_SPECS_FOLDER = 'module_specs'
 
 class TextCNNConstants:
-    WORKSPACE_NAME = 'linchi_test_service_workspace'
+    WORKSPACE_NAME = 'cus-test-cs'
     SUBSCRIPTION_ID = 'e9b2ec51-5c94-4fa8-809a-dc1e695e4896'
-    RESOURCE_GROUP = 'linchires'
-    COMPUTE_NAME = 'gpu-nc6'
+    RESOURCE_GROUP = 'cus-test-cs'
+    COMPUTE_NAME = 'gpu0'
 
 
 def spec_file_path(spec_file_name):
