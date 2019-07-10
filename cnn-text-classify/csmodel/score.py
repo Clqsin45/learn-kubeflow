@@ -72,7 +72,7 @@ class Predictor():
         plt.title('2-class Precision-Recall curve: AP={0:0.2f}'.format(
             average_precision))
         run.log_image("precition/recall curve", plot=f1_plt)
-        f1_plt.savefig(os.path.join(output_eval_dir, 'precition/recall.png'))
+        f1_plt.savefig(os.path.join(output_eval_dir, 'precition_recall.png'))
 
         f2_plt = plt.figure(1)
         metrics_name = ['precition', 'recall', 'F1-Score']
