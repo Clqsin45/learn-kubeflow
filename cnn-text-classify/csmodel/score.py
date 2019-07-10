@@ -74,7 +74,7 @@ class Predictor():
         run.log_image("precition/recall curve", plot=f1_plt)
         f1_plt.savefig(os.path.join(output_eval_dir, 'precition_recall.png'))
 
-        f2_plt = plt.figure(1)
+        f2_plt = plt.figure(2)
         metrics_name = ['precition', 'recall', 'F1-Score']
         p = precision_score(df_true, df_predict, average='binary')
         r = recall_score(df_true, df_predict, average='binary')
@@ -85,8 +85,7 @@ class Predictor():
         for x, y in zip(metrics_name, values_list):
             plt.text(x, y, '%.4f' % y, ha='center', va='bottom')
         plt.ylim([0, 1.1])
-        plt.ylabel('Precision')
-        plt.xlabel('Name Entity Type')
+        plt.ylabel('score')
         plt.title('Scores')
         run.log_image("scores", plot=f2_plt)
         f1_plt.savefig(os.path.join(output_eval_dir, 'scores.png'))
