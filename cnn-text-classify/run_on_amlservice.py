@@ -91,6 +91,7 @@ def create_pipeline_steps(compute_name):
     train.params['Kernel num'].assign(256)
     train.params['Dropout'].assign(0.5)
     train.params['Batch size'].assign(128)
+    train.params['Epoch num'].assign(1)
     train.params['L2 regularization weight'].assign(0.)
     train.params['Test interval'].assign(100)
 
@@ -110,7 +111,6 @@ def create_pipeline_steps(compute_name):
     return pipeline_step_list
 
 if __name__ == '__main__':
-    print( os.path.dirname('run_on_amlservice.py') )
     workspace = get_workspace(
         name=TextCNNConstants.WORKSPACE_NAME,
         subscription_id=TextCNNConstants.SUBSCRIPTION_ID,

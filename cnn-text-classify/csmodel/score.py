@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
     headers = df.columns.values.tolist()
     if 'label' in headers:
-        predictor.evaluation(df['label'], out_df['label'], args.predict_result_path)
+        predictor.evaluation(df['label'], out_df['Scored Label'], args.predict_result_path)
 
 
     # Dump data_type.json as a work around until SMT deploys

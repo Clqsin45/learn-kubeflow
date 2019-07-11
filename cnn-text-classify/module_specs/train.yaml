@@ -41,6 +41,11 @@ inputs:
   type: Int
   connectable: False
   description: How many steps to wait before testing
+- name: Epoch num
+  default: 100
+  type: Int
+  connectable: False
+  description: Epoch num
 - name: Label column name
   type: String
   connectable: False
@@ -104,6 +109,8 @@ implementation:
     - inputValue: L2 regularization weight
     - -test-interval
     - inputValue: Test interval
+    - -epochs
+    - inputValue: Epoch num
     - -trained-model
     - outputPath: Trained model
     - -vocab-path
