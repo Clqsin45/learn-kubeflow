@@ -42,7 +42,7 @@ inputs:
   connectable: False
   description: How many steps to wait before testing
 - name: Epoch num
-  default: 100
+  default: 1
   type: Int
   connectable: False
   description: Epoch num
