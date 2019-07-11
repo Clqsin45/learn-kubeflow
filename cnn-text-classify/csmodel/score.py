@@ -105,7 +105,7 @@ class Predictor():
         plt.ylabel('True Positive Rate or (Sensitivity)')
         plt.title('ROC Curve')
         plt.legend(loc="lower right")
-        run.log_image("scores", plot=f3_plt)
+        run.log_image("ROC curve", plot=f3_plt)
         f3_plt.savefig(os.path.join(output_eval_dir, 'roc.png'))
 
 if __name__ == '__main__':
