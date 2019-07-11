@@ -14,6 +14,8 @@ from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
 from sklearn.utils.fixes import signature
 from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import roc_curve
+from sklearn.metrics import auc
 
 class Predictor():
     def __init__(self, model_folder):
@@ -88,7 +90,23 @@ class Predictor():
         plt.ylabel('score')
         plt.title('Scores')
         run.log_image("scores", plot=f2_plt)
-        f1_plt.savefig(os.path.join(output_eval_dir, 'scores.png'))
+        f2_plt.savefig(os.path.join(output_eval_dir, 'scores.png'))
+
+        f3_plt = plt.figure(3)
+        # Compute fpr, tpr, thresholds and roc auc
+        fpr, tpr, thresholds = roc_curve(df_true, df_predict)
+        roc_auc = auc(df_true, df_predict)
+
+        plt.plot(fpr, tpr, label='ROC curve (area = %0.3f)' % roc_auc)
+        plt.plot([0, 1], [0, 1], 'k--')  # random predictions curve
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.0])
+        plt.xlabel('False Positive Rate or (1 - Specifity)')
+        plt.ylabel('True Positive Rate or (Sensitivity)')
+        plt.title('ROC Curve')
+        plt.legend(loc="lower right")
+        run.log_image("scores", plot=f3_plt)
+        f3_plt.savefig(os.path.join(output_eval_dir, 'roc.png'))
 
 if __name__ == '__main__':
     args = predict_args()
