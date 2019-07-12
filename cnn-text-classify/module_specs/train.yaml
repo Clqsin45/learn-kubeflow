@@ -1,4 +1,4 @@
-name: TextCNN Train-V3 Model
+name: Generic Train Model
 id: 3dae8366-a4e3-452d-ab85-585e0d51af70
 category: Machine Learning\Train
 description: Trains a TextCNN model in a supervised manner
@@ -42,10 +42,12 @@ inputs:
   connectable: False
   description: How many steps to wait before testing
 - name: Label column name
+  default: label
   type: String
   connectable: False
   description: Select the column that contains the label or outcome column
 - name: Text column name
+  default: text
   type: String
   connectable: False
   description: Select the column that contains the Text or input column
