@@ -2,6 +2,7 @@ name: TextCNN Train-V2 Model
 id: 606a9ec8-edb3-4259-81a1-2010a9b0260b
 category: Machine Learning\Train
 description: Trains a TextCNN model in a supervised manner
+isDeprecated: True
 inputs:
 - name: Train data file
   type: Dataset
