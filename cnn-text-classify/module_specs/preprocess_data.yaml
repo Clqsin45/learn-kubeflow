@@ -2,6 +2,7 @@ name: V2 TextCNN Word to Id
 id: 408ac085-6e61-4d6a-95d3-e02713fd62a3
 category: Machine Learning\Preprocess
 description: Transform Word to Id
+isDeprecated: True
 inputs:
 - name: Input vocab
   type: GenericFolder
